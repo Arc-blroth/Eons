@@ -1,0 +1,194 @@
+[
+    // -- Bootstrap --
+    {
+        "name": "winget_settings",
+        "type": "copy",
+        "from": "winget-settings.json",
+        "to": "%LOCALAPPDATA%\\Packages\\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\\LocalState\\settings.json"
+    },
+    // -- Text Editors --
+    {
+        "name": "notepad++",
+        "type": "winget",
+        "package": "Notepad++.Notepad++"
+    },
+    {
+        "name": "joplin",
+        "type": "winget",
+        "package": "Joplin.Joplin.Pre-release"
+    },
+    // -- Windows --
+    {
+        "name": "terminal",
+        "type": "winget",
+        "package": "Microsoft.WindowsTerminal"
+    },
+    {
+        "name": "powertoys",
+        "type": "winget",
+        "package": "Microsoft.PowerToys"
+    },
+    // -- Web --
+    {
+        "name": "firefox",
+        "type": "winget",
+        "package": "Mozilla.Firefox.DeveloperEdition"
+    },
+    // -- Misc --
+    {
+        "name": "peazip",
+        "type": "winget",
+        "package": "Giorgiotani.Peazip"
+    },
+    {
+        "name": "keepass",
+        "type": "download",
+        "url": "https://iweb.dl.sourceforge.net/project/keepass/KeePass%202.x/2.49/KeePass-2.49.zip",
+        "to": "%USERPROFILE%\\bin"
+    },
+    {
+        "name": "acrobat_reader",
+        "type": "winget",
+        "package": "Adobe.Acrobat.Reader.64-bit"
+    },
+    // -- Programming: IDEs & Tools --
+    {
+        "name": "git",
+        "type": "winget",
+        "package": "Git.Git"
+    },
+    {
+        "name": "gh",
+        "type": "winget",
+        "package": "GitHub.cli"
+    },
+    {
+        "name": "intellij",
+        "type": "winget",
+        "package": "JetBrains.IntelliJIDEA.Community"
+    },
+    {
+        "name": "vscode",
+        "type": "winget",
+        "package": "Microsoft.VisualStudioCode"
+    },
+    {
+        "name": "vsdevtools",
+        "type": "winget",
+        "package": "Microsoft.VisualStudio.2019.BuildTools"
+    },
+    {
+        "name": "vsdevtools_desktop",
+        "type": "run",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\setup\" -q modify --add Microsoft.VisualStudio.Workload.VCTools;includeRecommended --productId Microsoft.VisualStudio.Product.BuildTools --channelId VisualStudio.16.Release"
+    },
+    {
+        "name": "msys2",
+        "type": "winget",
+        "package": "msys2.msys2"
+    },
+    {
+        "name": "llvm",
+        "type": "winget",
+        "package": "LLVM.LLVM"
+    },
+    // -- Programming: Languages --
+    {
+        "name": "jdk17",
+        "type": "winget",
+        "package": "EclipseAdoptium.Temurin.17",
+        "location": "%USERPROFILE%\\.jdks"
+    },
+    {
+        "name": "python3",
+        "type": "winget",
+        "package": "Python.Python.3"
+    },
+    
+    {
+        "name": "rust",
+        "type": "run",
+        "command": "rustup-init --default-toolchain nightly --target x86_64-pc-windows-msvc x86_64-pc-windows-gnu"
+    },
+    {
+        "name": "node",
+        "type": "winget",
+        "package": "OpenJS.NodeJS"
+    },
+    {
+        "name": "go",
+        "type": "winget",
+        "package": "GoLang.Go"
+    },
+    // -- Drawing & Animation --
+    {
+        "name": "krita",
+        "type": "winget",
+        "package": "KDE.Krita"
+    },
+    {
+        "name": "gimp",
+        "type": "winget",
+        "package": "GIMP.GIMP.Nightly"
+    },
+    {
+        "name": "inkscape",
+        "type": "winget",
+        "package": "Inkscape.Inkscape"
+    },
+    {
+        "name": "blender",
+        "type": "winget",
+        "package": "BlenderFoundation.Blender"
+    },
+    // -- Video --
+    {
+        "name": "ffmpeg-download",
+        "type": "download",
+        "url": "https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z",
+        "sha256": "https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z.sha256"
+    },
+    {
+        "name": "ffmpeg",
+        "type": "run",
+        "command": "\"C:\\Program Files\\PeaZip\\res\\bin\\7z\\7z.exe\" -o \"%USERPROFILE%\\bin\" x ffmpeg-git-full.7z"
+    },
+    {
+        "name": "obs",
+        "type": "winget",
+        "package": "OBSProject.OBSStudio"
+    },
+    {
+        "name": "openshot",
+        "type": "winget",
+        "package": "OpenShot.OpenShot"
+    },
+    // -- Music --
+    {
+        "name": "musescore",
+        "type": "winget",
+        "package": "9P0CNR9RWZSX"
+    },
+    // -- Utils & Random Stuff --
+    {
+        "name": "cargo-expand",
+        "type": "run",
+        "command": "\"%USERPROFILE%\\.cargo\\bin\\cargo.exe\" install cargo-expand"
+    },
+    {
+        "name": "ripgrep",
+        "type": "run",
+        "command": "\"%USERPROFILE%\\.cargo\\bin\\cargo.exe\" install ripgrep"
+    },
+    {
+        "name": "uwuify",
+        "type": "run",
+        "command": "\"%USERPROFILE%\\.cargo\\bin\\cargo.exe\" install uwuify"
+    },
+    // -- Socials --
+    {
+        "name": "discord",
+        "type": "winget",
+        "package": "Discord.Discord"
+    }
+]

@@ -190,5 +190,23 @@
         "name": "discord",
         "type": "winget",
         "package": "Discord.Discord"
+    },
+    // -- Personalization --
+    {
+        "name": "flux",
+        "type": "winget",
+        "package": "flux.flux"
+    },
+    {
+        "name": "rainmeter",
+        "type": "winget",
+        "package": "Rainmeter.Rainmeter"
+    },
+    // -- WSL --
+    // (last because this requires a restart)
+    {
+        "name": "wsl",
+        "type": "run",
+        "command": "wsl --install"
     }
 ]

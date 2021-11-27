@@ -113,7 +113,7 @@
     {
         "name": "rust",
         "type": "run",
-        "command": ".eonscache\\rustup-init --default-toolchain nightly --target x86_64-pc-windows-msvc x86_64-pc-windows-gnu"
+        "command": ".eonscache\\rustup-init -y --default-toolchain nightly --target x86_64-pc-windows-msvc x86_64-pc-windows-gnu"
     },
     {
         "name": "node",

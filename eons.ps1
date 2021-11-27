@@ -1,4 +1,4 @@
-Write-Output "__ __      __ "
+Write-Output " __ __      __"
 Write-Output "|_ /  \|\ |(_ "
 Write-Output "|__\__/| \|__)"
 
@@ -8,7 +8,7 @@ $ProgressPreference = 'SilentlyContinue'
 $EonsCacheFile = "$PSScriptRoot/.eonscache"
 $EonsPackagesFile = "$PSScriptRoot/packages.json"
 $EonsInstallCacheFile = "$EonsCacheFile/.installed"
-$EonsBinFile = "$USERPROFILE/bin"
+$EonsBinFile = "$env:USERPROFILE/bin"
 
 # Create required directories
 if(-Not(Test-Path -Path $EonsCacheFile)) {
@@ -53,14 +53,16 @@ $EonPackages | ForEach-Object {
             }
             "copy" {
                 Write-Output ("Copying " + $package.from + " to " + $package.to)
-                Copy-Item -Path $package.from -Destination $package.to
+                $from = $package.from.replace("%USERPROFILE%", $env:USERPROFILE)
+                $to = $package.to.replace("%USERPROFILE%", $env:USERPROFILE)
+                Copy-Item -Path $from -Destination $to
                 break
             }
             "download" {
                 Write-Output ("Downloading " + $package.url)
                 $to = $EonsCacheFile
                 if($null -ne $package.to) {
-                    $to = $package.to
+                    $to = $package.to.replace("%USERPROFILE%", $env:USERPROFILE)
                 }
                 $fileName = [System.IO.Path]::GetFileName($package.url)
                 Invoke-WebRequest -UseBasicParsing -Uri $package.url -OutFile ($to + "/" + $fileName)
@@ -76,10 +78,11 @@ $EonPackages | ForEach-Object {
             }
             "run" {
                 Write-Output ("Running " + $package.command)
-                Invoke-Expression $package.command
+                Invoke-Expression ($package.command.replace("%USERPROFILE%", $env:USERPROFILE))
                 if($LastExitCode -ne 0) {
                     throw ("Failed to run command " + $package.command)
                 }
+                break
             }
         }
         Add-Content -Path $EonsInstallCacheFile -Value $_.name

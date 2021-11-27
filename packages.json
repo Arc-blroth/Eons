@@ -4,7 +4,7 @@
         "name": "winget_settings",
         "type": "copy",
         "from": "winget-settings.json",
-        "to": "%LOCALAPPDATA%\\Packages\\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\\LocalState\\settings.json"
+        "to": "%USERPROFILE%\\AppData\\Local\\Packages\\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\\LocalState\\settings.json"
     },
     // -- Text Editors --
     {

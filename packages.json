@@ -113,7 +113,7 @@
     {
         "name": "rust",
         "type": "run",
-        "command": "rustup-init --default-toolchain nightly --target x86_64-pc-windows-msvc x86_64-pc-windows-gnu"
+        "command": ".eonscache\\rustup-init --default-toolchain nightly --target x86_64-pc-windows-msvc x86_64-pc-windows-gnu"
     },
     {
         "name": "node",
@@ -156,7 +156,7 @@
     {
         "name": "ffmpeg",
         "type": "run",
-        "command": "\"C:\\Program Files\\PeaZip\\res\\bin\\7z\\7z.exe\" -o \"%USERPROFILE%\\bin\" x ffmpeg-git-full.7z"
+        "command": "\"C:\\Program Files\\PeaZip\\res\\bin\\7z\\7z.exe\" -o \"%USERPROFILE%\\bin\" x .eonscache\\ffmpeg-git-full.7z"
     },
     {
         "name": "obs",

@@ -104,7 +104,12 @@
         "type": "winget",
         "package": "Python.Python.3"
     },
-    
+    {
+        "name": "rustup",
+        "type": "download",
+        "url": "https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe",
+        "sha256": "https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe.sha256"
+    },
     {
         "name": "rust",
         "type": "run",

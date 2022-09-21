@@ -80,7 +80,7 @@
     {
         "name": "vsdevtools_desktop",
         "type": "run",
-        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\setup\" -q modify --add Microsoft.VisualStudio.Workload.VCTools;includeRecommended --productId Microsoft.VisualStudio.Product.BuildTools --channelId VisualStudio.16.Release"
+        "command": "C:\\Program Files` (x86)\\Microsoft` Visual` Studio\\Installer\\setup -q modify --add Microsoft.VisualStudio.Workload.VCTools`;includeRecommended --productId Microsoft.VisualStudio.Product.BuildTools --channelId VisualStudio.16.Release"
     },
     {
         "name": "msys2",
@@ -150,13 +150,12 @@
     {
         "name": "ffmpeg-download",
         "type": "download",
-        "url": "https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z",
-        "sha256": "https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z.sha256"
+        "url": "https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z"
     },
     {
         "name": "ffmpeg",
         "type": "run",
-        "command": "\"C:\\Program Files\\PeaZip\\res\\bin\\7z\\7z.exe\" -o \"%USERPROFILE%\\bin\" x .eonscache\\ffmpeg-git-full.7z"
+        "command": "C:\\Program` Files\\PeaZip\\res\\bin\\7z\\7z.exe \"-o%USERPROFILE%\\bin\" x .eonscache\\ffmpeg-git-full.7z"
     },
     {
         "name": "obs",
@@ -172,23 +171,23 @@
     {
         "name": "musescore",
         "type": "winget",
-        "package": "9P0CNR9RWZSX"
+        "package": "Musescore.Musescore"
     },
     // -- Utils & Random Stuff --
     {
         "name": "cargo-expand",
         "type": "run",
-        "command": "\"%USERPROFILE%\\.cargo\\bin\\cargo.exe\" install cargo-expand"
+        "command": "%USERPROFILE%\\.cargo\\bin\\cargo.exe install cargo-expand"
     },
     {
         "name": "ripgrep",
         "type": "run",
-        "command": "\"%USERPROFILE%\\.cargo\\bin\\cargo.exe\" install ripgrep"
+        "command": "%USERPROFILE%\\.cargo\\bin\\cargo.exe install ripgrep"
     },
     {
         "name": "uwuify",
         "type": "run",
-        "command": "\"%USERPROFILE%\\.cargo\\bin\\cargo.exe\" install uwuify"
+        "command": "%USERPROFILE%\\.cargo\\bin\\cargo.exe install uwuify"
     },
     // -- Socials --
     {
